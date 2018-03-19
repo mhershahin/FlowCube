@@ -179,9 +179,9 @@ public class LevelsLayout {
         View v = new LevelsIcon(context, info.getListTrue(), info.getId(), false);
 
         LinearLayout layoutforStars = new LinearLayout(context);
-        ImageView imageStar1 = new ImageView(context);
-        ImageView imageStar2 = new ImageView(context);
-        ImageView imageStar3 = new ImageView(context);
+        AppCompatImageView imageStar1 = new AppCompatImageView(context);
+        AppCompatImageView imageStar2 = new AppCompatImageView(context);
+        AppCompatImageView imageStar3 = new AppCompatImageView(context);
 
 
         LinearLayout.LayoutParams paramsLayoutb = new LinearLayout.LayoutParams(width, height);
@@ -232,21 +232,21 @@ public class LevelsLayout {
         imageStar1.setLayoutParams(paramsStar);
         imageStar2.setLayoutParams(paramsStar);
         imageStar3.setLayoutParams(paramsStar);
-        imageStar1.setBackgroundResource(R.drawable.ic_star_dark);
-        imageStar2.setBackgroundResource(R.drawable.ic_star_dark);
-        imageStar3.setBackgroundResource(R.drawable.ic_star_dark);
+        imageStar1.setImageResource(R.drawable.ic_star_dark);
+        imageStar2.setImageResource(R.drawable.ic_star_dark);
+        imageStar3.setImageResource(R.drawable.ic_star_dark);
         if (starsBoolian != null) {
             if (starsBoolian.isWine()) {
-                imageStar1.setBackgroundResource(R.drawable.ic_star_yellow);
+                imageStar1.setImageResource(R.drawable.ic_star_yellow);
                 ollStars++;
 
             }
             if (starsBoolian.isStep()) {
-                imageStar2.setBackgroundResource(R.drawable.ic_star_yellow);
+                imageStar2.setImageResource(R.drawable.ic_star_yellow);
                 ollStars++;
             }
             if (starsBoolian.isTime()) {
-                imageStar3.setBackgroundResource(R.drawable.ic_star_yellow);
+                imageStar3.setImageResource(R.drawable.ic_star_yellow);
                 ollStars++;
             }
         }

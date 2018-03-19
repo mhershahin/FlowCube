@@ -153,10 +153,10 @@ public class Wine extends AppCompatActivity {
         textTime.setText(a + ":" + (starIntegers.getTime() - (a * 60)));
 
         if (starsBoolian.isStep()) {
-            stepStar.setBackgroundResource(R.drawable.ic_star_yellow);
+            stepStar.setImageResource(R.drawable.ic_star_yellow);
         }
         if (starsBoolian.isTime()) {
-            timeStar.setBackgroundResource(R.drawable.ic_star_yellow);
+            timeStar.setImageResource(R.drawable.ic_star_yellow);
         }
 
         if (level.getId() == levellist.get(levellist.size() - 1).getId()) {

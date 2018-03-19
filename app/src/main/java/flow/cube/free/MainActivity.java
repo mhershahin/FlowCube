@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements IDialogLisener {
     }
 
     private void initSound(boolean k) {
-        sound.setBackgroundResource(k ? R.drawable.sound : R.drawable.mute);
+        sound.setImageResource(k ? R.drawable.sound : R.drawable.mute);
 
 
     }
