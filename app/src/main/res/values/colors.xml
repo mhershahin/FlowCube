@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#343434</color>
+    <color name="ddd">#000000</color>
+    <color name="game_back">#979797</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="textcolor">#fe0000</color>
+    <color name="btn2color">#006dfe</color>
+    <color name="btn1color">#ffff01</color>
+    <color name="color_star_yellow">#f1c30e</color>
+    <color name="color_star_dark">#929292</color>
+    <color name="black">#050505</color>
+    <color name="trans">#00000000 </color>
+
+</resources>

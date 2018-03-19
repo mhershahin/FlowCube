@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "flow.cube.free"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 100
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            shrinkResources false
+        }
+
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+def firebaseVersion = "11.4.2"
+
+    def appCompatVersion = "26.1.0";
+
+    compile "com.android.support:design:$appCompatVersion"
+    compile "com.android.support:appcompat-v7:$appCompatVersion"
+    compile 'com.android.support:support-v4:26.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile "com.google.android.gms:play-services-ads:$firebaseVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "com.google.firebase:firebase-ads:$firebaseVersion"
+    compile "com.google.firebase:firebase-crash:$firebaseVersion"
+    testCompile 'junit:junit:4.12'
+    apply plugin: 'com.google.gms.google-services'
+
+}
+
+
+apply plugin: 'com.google.gms.google-services'

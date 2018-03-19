@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Flow Cube</string>
+    <string name="void_cube">Void</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="exit">Exit game</string>
+    <string name="play_again">Play again</string>
+    <string name="facebook_app_id">1948251362086776</string>
+    <string name="game_help">With the help of the void cube you need to relocate the other cubes to have the picture in the top</string>
+    <string name="strin_Step">It\'s also given the minimum number of the steps</string>
+    <string name="strin_time">And the time to overcome the challenge</string>
+    <string name="name">Flow Cube</string>
+
+
+    <string-array name="colors">
+        <item>#383940</item>
+        <item>#fe0000</item>
+        <item>#01c642</item>
+        <item>#006dfe</item>
+        <item>#ffff01</item>
+        <item>#ff8500</item>
+        <item>#8200f3</item>
+        <item>#dc00d8</item>
+    </string-array>
+    <string name="adIdMenu">ca-app-pub-8709901535444131/7584333099</string>
+    <string name="adIdGame">ca-app-pub-8709901535444131/2286106083</string>
+
+</resources>
