@@ -1,6 +1,4 @@
 package flow.cube.free;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,25 +6,17 @@ import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
-
 import android.widget.ScrollView;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-
-
 import java.util.ArrayList;
-
 import flow.cube.free.help.Help1;
 import flow.cube.free.model.level.LevelsInfo;
 import flow.cube.free.levels.LevelsLayout;
 import flow.cube.free.memory.SharidPref;
 import flow.cube.free.util.DialogHelper;
 import flow.cube.free.util.IDialogLisener;
-
-
 public class MainActivity extends AppCompatActivity implements IDialogLisener {
     private Animation anim;
     boolean a;
