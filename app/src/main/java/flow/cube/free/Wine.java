@@ -185,7 +185,6 @@ public class Wine extends AppCompatActivity {
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "http://play.google.com/store/apps/details?id=" + getPackageName());
         sendIntent.setType("text/plain");
-
         Intent chooser = Intent.createChooser(sendIntent, " ");
         chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(chooser);
