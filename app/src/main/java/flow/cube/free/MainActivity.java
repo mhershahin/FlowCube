@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -11,6 +12,9 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import flow.cube.free.help.Help1;
 import flow.cube.free.model.level.LevelsInfo;
 import flow.cube.free.levels.LevelsLayout;
@@ -20,19 +24,27 @@ import flow.cube.free.util.IDialogLisener;
 public class MainActivity extends AppCompatActivity implements IDialogLisener {
     private Animation anim;
     boolean a;
-    private AppCompatImageView exit;
-    private AppCompatImageView help;
-    private AppCompatImageView sound;
-    private ScrollView scrollView;
     private ArrayList<LevelsInfo> levels = new ArrayList<LevelsInfo>();
 
-    private AdView mAdView;
-    private AdRequest adRequest;
+    @BindView(R.id.x)
+    AppCompatImageView exit;
+    @BindView(R.id.help)
+    AppCompatImageView help;
+    @BindView(R.id.sound)
+    AppCompatImageView sound;
+    @BindView(R.id.scrol)
+    ScrollView scrollView;
+
+
+
+//    private AdView mAdView;
+//    private AdRequest adRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        ButterKnife.bind(this);
         if (SharidPref.getInstance().isFirst(this)) {
             Intent i = new Intent(MainActivity.this, Help1.class);
             startActivity(i);
@@ -41,21 +53,16 @@ public class MainActivity extends AppCompatActivity implements IDialogLisener {
         anim = AnimationUtils.loadAnimation(this, R.anim.myscale);
 
 
-        exit = (AppCompatImageView) findViewById(R.id.x);
-        help = (AppCompatImageView) findViewById(R.id.help);
-        sound = (AppCompatImageView) findViewById(R.id.sound);
-
-        scrollView = (ScrollView) findViewById(R.id.scrol);
 
         addLevelDesign();
 
 
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdView adView = new AdView(this);
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId(getString(R.string.adIdMenu));
-        adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        mAdView = (AdView) findViewById(R.id.adView);
+//        AdView adView = new AdView(this);
+//        adView.setAdSize(AdSize.BANNER);
+//        adView.setAdUnitId(getString(R.string.adIdMenu));
+//        adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
 
     }
@@ -72,25 +79,25 @@ public class MainActivity extends AppCompatActivity implements IDialogLisener {
 
     @Override
     protected void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
+//        if (mAdView != null) {
+//            mAdView.pause();
+//        }
         super.onPause();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
+//        if (mAdView != null) {
+//            mAdView.resume();
+//        }
     }
 
     @Override
     public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
+//        if (mAdView != null) {
+//            mAdView.destroy();
+//        }
         super.onDestroy();
     }
 

@@ -10,7 +10,6 @@
     >
 
     <LinearLayout
-
         android:id="@+id/wine_loyout"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -115,7 +114,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <android.support.v7.widget.AppCompatTextView
                         android:id="@+id/step_data"
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
@@ -134,8 +133,8 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/lamp_data"
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_time"
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:gravity="center"
@@ -216,6 +215,7 @@
         android:layout_weight="1">
 
         <LinearLayout
+            android:id="@+id/wine_menu_layout"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_weight="1"
@@ -226,11 +226,11 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_margin="6dp"
-            app:srcCompat="@drawable/menu"
-            android:onClick="menu" />
+            app:srcCompat="@drawable/menu" />
     </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/wine_share_layout"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
@@ -241,10 +241,10 @@
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_margin="6dp"
-                app:srcCompat="@drawable/share"
-                android:onClick="share" />
+                app:srcCompat="@drawable/share" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/wine_refresh_layout"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
@@ -256,12 +256,10 @@
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_margin="6dp"
-                app:srcCompat="@drawable/refresh"
-                android:onClick="refreshClick" />
+                app:srcCompat="@drawable/refresh" />
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/next_laout"
-
+            android:id="@+id/wine_next_laout"
             android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
@@ -272,8 +270,7 @@
                 android:layout_width="50dp"
                 android:layout_height="48dp"
                 android:layout_margin="6dp"
-                app:srcCompat="@drawable/next"
-                android:onClick="next" />
+                app:srcCompat="@drawable/next" />
         </LinearLayout>
     </LinearLayout>
 

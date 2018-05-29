@@ -1,15 +1,22 @@
 package flow.cube.free;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatTextView;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import flow.cube.free.key.Keys;
 import flow.cube.free.levels.LevelsIcon;
 import flow.cube.free.model.level.LevelsInfo;
@@ -20,7 +27,7 @@ import flow.cube.free.memory.SharidPref;
 import flow.cube.free.util.TypeFaceService;
 
 
-public class Wine extends AppCompatActivity {
+public class Wine extends AppCompatActivity implements View.OnClickListener {
     private StarIntegers starIntegers;
     private StarsBoolian starsBoolian;
     private List<StarsBoolian> starsListt;
@@ -30,17 +37,36 @@ public class Wine extends AppCompatActivity {
 
     private Animation anim;
 
-    private LinearLayout linerTrue;
-    private TextView textStep;
-    private TextView textTime;
-    private AppCompatImageView stepStar;
-    private AppCompatImageView timeStar;
-    private AppCompatImageView menu;
-    private AppCompatImageView share;
-    private AppCompatImageView next;
-    private LinearLayout nextLayout;
+    @BindView(R.id.wine_loyout)
+    LinearLayout linerTrue;
+    @BindView(R.id.step_data)
+    AppCompatTextView textStep;
+    @BindView(R.id.text_time)
+    AppCompatTextView textTime;
+
+    @BindView(R.id.star_step)
+    AppCompatImageView stepStar;
+    @BindView(R.id.stat_lamp)
+    AppCompatImageView timeStar;
+
+    @BindView(R.id.menu)
+    AppCompatImageView menu;
+    @BindView(R.id.share)
+    AppCompatImageView share;
+    @BindView(R.id.refresh_wine)
+    AppCompatImageView refresh;
+    @BindView(R.id.next)
+    AppCompatImageView next;
 
 
+    @BindView(R.id.wine_next_laout)
+    LinearLayout nextLayout;
+    @BindView(R.id.wine_refresh_layout)
+    LinearLayout refreshLayout;
+    @BindView(R.id.wine_menu_layout)
+    LinearLayout menuLayout;
+    @BindView(R.id.wine_share_layout)
+    LinearLayout shareLayout;
 
 
     @Override
@@ -48,20 +74,17 @@ public class Wine extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wine);
+        ButterKnife.bind(this);
 
-
-        linerTrue = (LinearLayout) findViewById(R.id.wine_loyout);
-        textStep = (TextView) findViewById(R.id.step_data);
-        textTime = (TextView) findViewById(R.id.lamp_data);
         textStep.setTypeface(TypeFaceService.getInstance().getPanforteProLight(this));
         textTime.setTypeface(TypeFaceService.getInstance().getPanforteProLight(this));
-        stepStar = (AppCompatImageView) findViewById(R.id.star_step);
-        timeStar = (AppCompatImageView) findViewById(R.id.stat_lamp);
-        menu = (AppCompatImageView) findViewById(R.id.menu);
-        share = (AppCompatImageView) findViewById(R.id.share);
-        next = (AppCompatImageView) findViewById(R.id.next);
+
         anim = AnimationUtils.loadAnimation(this, R.anim.myscale);
-        nextLayout = (LinearLayout) findViewById(R.id.next_laout);
+
+        menuLayout.setOnClickListener(this);
+        shareLayout.setOnClickListener(this);
+        refreshLayout.setOnClickListener(this);
+        nextLayout.setOnClickListener(this);
 
 
     }
@@ -160,8 +183,7 @@ public class Wine extends AppCompatActivity {
         }
 
         if (level.getId() == levellist.get(levellist.size() - 1).getId()) {
-            LinearLayout layoutNex = (LinearLayout) findViewById(R.id.next_laout);
-            layoutNex.setVisibility(View.GONE);
+            nextLayout.setVisibility(View.GONE);
         }
 
     }
@@ -172,15 +194,38 @@ public class Wine extends AppCompatActivity {
         refresh();
     }
 
-    public void menu(View view) {
+
+    @Override
+    public void onClick(View v) {
+        Log.e("id",v.getId()+"  ");
+        switch (v.getId()) {
+            case R.id.wine_menu_layout:
+                menu();
+                break;
+            case R.id.wine_share_layout:
+                share();
+                break;
+            case R.id.wine_refresh_layout:
+                refresh.setAnimation(anim);
+                refresh();
+                break;
+            case R.id.wine_next_laout:
+                next();
+                break;
+
+        }
+
+    }
+
+
+    public void menu() {
         menu.startAnimation(anim);
         Intent i = new Intent(Wine.this, MainActivity.class);
         startActivity(i);
     }
 
-    public void share(View view) {
+    public void share() {
         share.startAnimation(anim);
-
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "http://play.google.com/store/apps/details?id=" + getPackageName());
@@ -192,11 +237,7 @@ public class Wine extends AppCompatActivity {
 
     }
 
-
-    public void refreshClick(View view) {
- refresh();
-    }
-    private void refresh(){
+    private void refresh() {
         level.setTime(starIntegers.getTime());
         Intent intent = new Intent(Wine.this, GamePaje.class);
         intent.putExtra(Keys.LEVEL_INFO, level);
@@ -204,7 +245,7 @@ public class Wine extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void next(View view) {
+    public void next() {
         next.startAnimation(anim);
         Intent intent = new Intent(Wine.this, GamePaje.class);
         intent.putExtra(Keys.LEVEL_INFO, levelNext);

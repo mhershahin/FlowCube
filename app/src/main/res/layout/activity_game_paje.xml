@@ -97,7 +97,7 @@
             </LinearLayout>
 
 
-            <TextView
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/time_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="21sp" />
 
-            <TextView
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,9 +120,6 @@
 
     </LinearLayout>
 
-
-
-
         <LinearLayout
             android:id="@+id/game_layout"
             android:layout_width="match_parent"
@@ -131,24 +128,8 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="1dp">
-
-
         </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
 
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            ads:adSize="SMART_BANNER"
-            ads:adUnitId="@string/adIdGame"></com.google.android.gms.ads.AdView>
-    </LinearLayout>
 </LinearLayout>

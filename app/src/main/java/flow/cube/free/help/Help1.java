@@ -24,17 +24,21 @@ public class Help1 extends AppCompatActivity {
     @BindView(R.id.game_help_text1)
     AppCompatTextView gameHelpText;
 
+    @BindView(R.id.true_icon)
+    LinearLayout trueIcon;
+    @BindView(R.id.game_layout)
+    LinearLayout liner;
+
+
+
+
     private LevelsInfo infoFirst;
-    private LinearLayout trueIcon;
-    private LinearLayout liner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help1);
         ButterKnife.bind(Help1.this);
-        trueIcon = (LinearLayout) findViewById(R.id.true_icon);
-        liner = (LinearLayout) findViewById(R.id.game_layout);
         displeymetric();
         inicalizacia();
     }
@@ -48,15 +52,15 @@ public class Help1 extends AppCompatActivity {
         int hight = dm.heightPixels;
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, width);
         liner.setLayoutParams(params);
+        int a;
         if ((1.5 * width / 3.5) < 1.6 * hight / 8.6) {
-            int a = (int) (1.5 * width / 3.5);
-            LinearLayout.LayoutParams paramsTrueIcon = new LinearLayout.LayoutParams(a, a);
-            trueIcon.setLayoutParams(paramsTrueIcon);
+            a = (int) (1.5 * width / 3.5);
         } else {
-            int a = (int) (1.6 * hight / 8.6);
-            LinearLayout.LayoutParams paramsTrueIcon = new LinearLayout.LayoutParams(a, a);
-            trueIcon.setLayoutParams(paramsTrueIcon);
+             a = (int) (1.6 * hight / 8.6);
         }
+        LinearLayout.LayoutParams paramsTrueIcon = new LinearLayout.LayoutParams(a, a);
+        trueIcon.setLayoutParams(paramsTrueIcon);
+
         gameHelpText.setTypeface(TypeFaceService.getInstance().getPanforteProBold(Help1.this));
     }
 

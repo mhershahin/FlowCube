@@ -77,7 +77,7 @@ String a = context.getResources().getString(R.string.project_id);
 
     private void inicalizatia() {
 
-        click = MediaPlayer.create(context, R.raw.click);
+        click = MediaPlayer.create(context.getApplicationContext(), R.raw.click);
         click.setVolume(10.0f, 3.0f);
 
         steps=-1;
@@ -361,7 +361,7 @@ if(canMove==1) {
 
             if(click.isPlaying()){
                 click.stop();
-                MediaPlayer click1=MediaPlayer.create(context, R.raw.click);
+                MediaPlayer click1=MediaPlayer.create(context.getApplicationContext(), R.raw.click);
                 click1.setVolume(10.0f, 3.0f);
                 click1.start();
             } else {

@@ -55,8 +55,8 @@ public class GamePaje extends AppCompatActivity implements IDialogLisener {
     private LevelsInfo level;
 
 
-    private AdView mAdView;
-    private AdRequest adRequest;
+//    private AdView mAdView;
+//    private AdRequest adRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,16 +65,15 @@ public class GamePaje extends AppCompatActivity implements IDialogLisener {
         setContentView(R.layout.activity_game_paje);
         ButterKnife.bind(this);
         anim = AnimationUtils.loadAnimation(this, R.anim.myscale);
-        liner = (LinearLayout) findViewById(R.id.game_layout);
-        timeText = (TextView) findViewById(R.id.time);
+
 
         setFonts();
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdView adView = new AdView(this);
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId(getString(R.string.adIdGame));
-        adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        mAdView = (AdView) findViewById(R.id.adView);
+//        AdView adView = new AdView(this);
+//        adView.setAdSize(AdSize.BANNER);
+//        adView.setAdUnitId(getString(R.string.adIdGame));
+//        adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
     }
 
 
@@ -91,9 +90,9 @@ public class GamePaje extends AppCompatActivity implements IDialogLisener {
 
     @Override
     protected void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
+//        if (mAdView != null) {
+//            mAdView.pause();
+//        }
         super.onPause();
         pouse = true;
     }
@@ -101,16 +100,16 @@ public class GamePaje extends AppCompatActivity implements IDialogLisener {
     @Override
     public void onResume() {
         super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
+//        if (mAdView != null) {
+//            mAdView.resume();
+//        }
     }
 
     @Override
     public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
+//        if (mAdView != null) {
+//            mAdView.destroy();
+//        }
         super.onDestroy();
     }
 
