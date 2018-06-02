@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:gravity="center"
         android:id="@+id/dialog_text"
         android:textColor="@color/colorAccent"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-        <TextView
+        <android.support.v7.widget.AppCompatTextView
             android:textSize="25sp"
             android:textColor="@color/colorAccent"
              android:gravity="center"
@@ -31,7 +31,7 @@
             android:layout_marginRight="70dp"
 
             />
-        <TextView
+        <android.support.v7.widget.AppCompatTextView
             android:textSize="25sp"
             android:gravity="center"
             android:textColor="@color/colorAccent"

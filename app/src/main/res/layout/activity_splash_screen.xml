@@ -20,7 +20,8 @@
             android:layout_height="match_parent"
             android:text="@string/name"
             android:textColor="@color/colorAccent"
-            android:textSize="40dp" />
+            android:textSize="40dp"
+           />
     </LinearLayout>
 
     <LinearLayout

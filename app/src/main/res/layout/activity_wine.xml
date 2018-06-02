@@ -51,8 +51,7 @@
 
                         android:layout_width="55dp"
                         android:layout_height="50dp"
-                        app:srcCompat="@drawable/ic_done"
-                        android:onClick="menu" />
+                        app:srcCompat="@drawable/ic_done" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -103,8 +102,7 @@
                     <android.support.v7.widget.AppCompatImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        app:srcCompat="@drawable/ic_done_white"
-                        android:onClick="menu" />
+                        app:srcCompat="@drawable/ic_done_white" />
                 </LinearLayout>
 
                 <LinearLayout

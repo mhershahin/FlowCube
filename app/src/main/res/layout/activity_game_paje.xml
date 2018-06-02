@@ -29,11 +29,10 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/menu"
-                    android:onClick="menu" />
+                    app:srcCompat="@drawable/menu" />
             </LinearLayout>
 
-            <TextView
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/step_titel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,7 +41,7 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="21sp" />
 
-            <TextView
+            <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/step"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +91,7 @@
                     android:layout_height="48dp"
                     android:layout_marginTop="10dp"
                     app:srcCompat="@drawable/refresh"
-                    android:onClick="refresh" />
+                    />
 
             </LinearLayout>
 

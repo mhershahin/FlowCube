@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="flow.cube.free">
+    package="flow.cube.freee">
 
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -17,18 +17,18 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name="flow.cube.freee.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="flow.cube.free.SplashScreen"/>
-        <activity android:name="flow.cube.free.GamePaje" />
-        <activity android:name="flow.cube.free.Wine" />
-        <activity android:name="flow.cube.free.help.Help1" />
-        <activity android:name="flow.cube.free.help.Help2" />
+        <activity android:name="flow.cube.freee.SplashScreen"/>
+        <activity android:name="flow.cube.freee.GamePaje" />
+        <activity android:name="flow.cube.freee.Wine" />
+        <activity android:name="flow.cube.freee.help.Help1" />
+        <activity android:name="flow.cube.freee.help.Help2" />
 
 
     </application>
