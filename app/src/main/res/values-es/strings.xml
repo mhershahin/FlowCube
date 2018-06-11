@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+//ispaneren
+    <string name="app_name">Cubo de flujo</string>
+    <string name="void_cube">Vacío</string>
+    <string name="Yes">Sí</string>
+    <string name="No">No</string>
+    <string name="step">paso</string>
+    <string name="time">Tiempo</string>
+    <string name="exit">Salir del juego</string>
+    <string name="name">Cubo de flujo</string>
+    <string name="play_again">Juega de nuevo</string>
+    <string name="game_help">Con la ayuda del cubo vacío, necesitas reubicar los otros cubos para tener la imagen en la parte superior</string>
+    <string name="strin_Step">También se le da el número mínimo de pasos</string>
+    <string name="strin_time">Tiempo para superar el desafío</string>
+</resources>

@@ -240,8 +240,8 @@ public class GemeHelp extends View {
 
             }
         }
-
-        canvas.drawText("Void", textX, textY, painttext);
+    
+        canvas.drawText(getResources().getString(R.string.void_cube), textX, textY, painttext);
 
         if (!isontoch) {
             if (textTouchX + dinamicX > cirkleA) {

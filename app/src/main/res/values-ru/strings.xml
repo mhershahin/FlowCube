@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //ruseren
+    <string name="app_name">поток кубов</string>
+    <string name="void_cube">пустота</string>
+    <string name="Yes">да</string>
+    <string name="No">нет</string>
+    <string name="step">шаги</string>
+
+    <string name="time">время</string>
+    <string name="exit">Выйти из игры</string>
+    <string name="name">поток кубов</string>
+    <string name="play_again">играть снова</string>
+    <string name="game_help">С помощью пустой кубика вам нужно переместить другие кубики, чтобы изображение было похожие в верхней части</string>
+    <string name="strin_Step"> дается минимальное количество шагов</string>
+    <string name="strin_time">И время, чтобы играть игру </string>
+</resources>

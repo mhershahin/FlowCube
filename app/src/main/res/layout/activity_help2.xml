@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Step"
+                    android:text="@string/step"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 
@@ -60,6 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingTop="3dp"
+                    android:paddingLeft="10dp"
                     android:text="@string/strin_Step"
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp" />
@@ -85,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Time"
+                    android:text="@string/time"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp" />
 
@@ -112,6 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingTop="3dp"
+                    android:paddingLeft="10dp"
                     android:text="@string/strin_time"
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp" />

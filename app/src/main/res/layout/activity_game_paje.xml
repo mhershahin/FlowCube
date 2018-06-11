@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Step"
+                android:text="@string/step"
                 android:textColor="@color/colorAccent"
                 android:textSize="21sp" />
 
@@ -101,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Time"
+                android:text="@string/time"
                 android:textColor="@color/colorAccent"
                 android:textSize="21sp" />
 

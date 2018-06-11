@@ -289,9 +289,7 @@ if(canMove==1) {
                 rectVoid = rect;
             }
         }
-        if(rectToutch.getRect()!=null || rectVoid.getRect()!=null) {
-            canMove = 0;
-        }else {
+        if(rectToutch.getRect()!=null && rectVoid.getRect()!=null) {
             int idRectToutch = rectToutch.getRect().getId();
             int idRectVoid = rectVoid.getRect().getId();
             if(idRectToutch%10==idRectVoid%10 && idRectToutch/10>idRectVoid/10){
@@ -306,6 +304,8 @@ if(canMove==1) {
             if(idRectToutch/10==idRectVoid/10 && idRectToutch%10>idRectVoid%10 ){
                 canMove=4;
             }
+        }else {
+            canMove = 0;
         }
 
     }

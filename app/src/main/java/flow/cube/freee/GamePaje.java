@@ -53,9 +53,6 @@ public class GamePaje extends AppCompatActivity implements IDialogLisener,View.O
     private LevelsInfo level;
 
 
-//    private AdView mAdView;
-//    private AdRequest adRequest;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,12 +64,6 @@ public class GamePaje extends AppCompatActivity implements IDialogLisener,View.O
         refresh.setOnClickListener(this);
 
         setFonts();
-//        mAdView = (AdView) findViewById(R.id.adView);
-//        AdView adView = new AdView(this);
-//        adView.setAdSize(AdSize.BANNER);
-//        adView.setAdUnitId(getString(R.string.adIdGame));
-//        adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
     }
 
 
